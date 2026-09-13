@@ -178,7 +178,7 @@ export default function Home() {
 
       <section className="faq" id="faq">
         <div className="faq-copy reveal"><span>PERGUNTAS FREQUENTES</span><h2>O essencial.<br /><em>Direto ao ponto.</em></h2><p>As respostas do próprio bot, reunidas num só lugar: funcionamento, automatização, levantamentos e níveis VIP.</p></div>
-        <div className="questions reveal">{questions.map(([q,a],i) => <details key={q} open={i===0}><summary><span>0{i+1}</span>{q}<i><ChevronDown size={18} /></i></summary><p>{a}</p></details>)}</div>
+        <div className="questions reveal">{questions.map(([q,a],i) => <details key={q}><summary><span>0{i+1}</span>{q}<i><ChevronDown size={18} /></i></summary><p>{a}</p></details>)}</div>
       </section>
 
       <footer><Logo /><p>© 2026 AutoLucro IA</p><small>Ativos digitais envolvem risco. Os conteúdos e valores exibidos têm caráter informativo e ilustrativo e não constituem garantia de rentabilidade.</small></footer>
