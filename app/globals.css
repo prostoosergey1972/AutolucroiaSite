@@ -45,14 +45,23 @@ header nav a:first-child{border-color:transparent;background:transparent;color:#
 /* Mobile guardrails: keep the composition inside the viewport. */
 html,body{max-width:100%;overflow-x:clip}
 .hero h1 span{display:inline-block;animation:hero-accent-breathe 4.8s ease-in-out infinite}
-@keyframes hero-accent-breathe{0%,100%{transform:translateY(0);text-shadow:0 0 0 rgba(255,51,57,0)}50%{transform:translateY(-3px);text-shadow:0 0 24px rgba(255,51,57,.32)}}
+@keyframes hero-accent-breathe{0%,100%{transform:translateY(0);text-shadow:0 0 7px rgba(255,82,88,.28)}50%{transform:translateY(-3px);text-shadow:0 0 15px rgba(255,130,134,.72),0 0 42px rgba(255,48,56,.48)}}
 @media(max-width:700px){
   header{padding:0 8px;overflow:hidden}
   header nav{width:calc(100% - 40px);margin-left:6px;gap:0;padding:3px;overflow:hidden}
-  header nav a{min-width:0;flex:1 1 0;padding:8px 3px;font-size:clamp(8px,2.15vw,10px);letter-spacing:-.025em;text-align:center}
+  header nav a{min-width:0;flex:1 1 0;padding:8px 3px;font-size:clamp(9px,2.45vw,10.5px);letter-spacing:-.03em;text-align:center}
   header nav a+a{margin-left:0}
   .section-head{gap:16px}
   .section-head h2{max-width:100%;font-size:clamp(2.8rem,12.2vw,3.7rem);overflow-wrap:anywhere}
   .section-head h2 em{font-size:clamp(2.45rem,10.4vw,3.2rem);letter-spacing:-.06em}
 }
 @media(prefers-reduced-motion:reduce){.hero h1 span{animation:none}}
+
+@media(max-width:700px){
+  .flow-visual{height:390px}
+  .flow-card{width:145px}
+  .flow-card .phone{height:298px}
+  .flow-1{left:-6px;top:28px}
+  .flow-3{right:-6px;top:28px}
+  .flow-card figcaption{width:calc(100% + 12px);margin-left:-6px;white-space:normal;line-height:1.18}
+}
