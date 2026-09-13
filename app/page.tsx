@@ -102,7 +102,7 @@ export default function Home() {
         <a href="#inicio" aria-label="AutoLucro IA — início"><Logo /></a>
         <nav ref={menu} aria-label="Navegação">
           <span className="nav-liquid" aria-hidden="true" style={{ left: liquidPill.left, width: liquidPill.width, opacity: liquidPill.visible ? 1 : 0 }} />
-          {[["como", "Como funciona"], ["resultados", "Clientes"], ["seguranca", "Segurança"], ["lucas", "Fundador"], ["faq", "Dúvidas"]].map(([id, label]) => <a key={id} href={`#${id}`} onClick={() => setActiveSection(id)} className={activeSection === id ? "active" : ""} aria-current={activeSection === id ? "location" : undefined}>{label}</a>)}
+          {[["como", "Como funciona"], ["resultados", "Clientes"], ["seguranca", "Garantias"], ["lucas", "Fundador"], ["faq", "Dúvidas"]].map(([id, label]) => <a key={id} href={`#${id}`} onClick={() => setActiveSection(id)} className={activeSection === id ? "active" : ""} aria-current={activeSection === id ? "location" : undefined}>{label}</a>)}
         </nav>
       </header>
 

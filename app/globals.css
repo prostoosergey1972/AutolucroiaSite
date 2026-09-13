@@ -41,3 +41,18 @@ header nav a:first-child{border-color:transparent;background:transparent;color:#
 .steps::before,.step-arrow{display:none}.steps article{position:static}.flow-visual{height:520px}.steps article>span{background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.22);color:#bdb5b3;box-shadow:none}.trust-strip span{position:relative;overflow:hidden;transition:color .3s,background .3s}.trust-strip span::before{content:"";position:absolute;inset:auto -20% -50%;height:90%;background:radial-gradient(ellipse at center,rgba(255,62,68,.18),transparent 68%);opacity:0;transition:opacity .3s}.trust-strip span:hover{color:#fff;background:rgba(255,255,255,.025)}.trust-strip span:hover::before{opacity:1}.trust-strip span svg,.trust-strip span{z-index:0}.video-story{position:relative;overflow:hidden}.video-story::before{content:"";position:absolute;z-index:0;top:0;left:20px;right:20px;height:1px;background:linear-gradient(90deg,transparent,#ff5157,transparent);opacity:.7}.video-story>*{position:relative;z-index:1}.video-frame video{transition:transform .6s cubic-bezier(.2,.8,.2,1)}.video-story:hover .video-frame video{transform:scale(1.035)}.questions details{transition:border-color .25s,background .25s}.questions details:hover{border-color:rgba(255,67,73,.42);background:rgba(255,255,255,.018)}
 #como,#resultados,#seguranca,#lucas,#faq{scroll-margin-top:105px}.steps article.reveal{will-change:transform,opacity}@media(max-width:700px){#como,#resultados,#seguranca,#lucas,#faq{scroll-margin-top:86px}}
 @media(max-width:700px){.flow-visual{height:402px}.flow-card figcaption{font-size:10px}.flow-card figcaption b{width:26px;height:26px;font-size:10px}}
+
+/* Mobile guardrails: keep the composition inside the viewport. */
+html,body{max-width:100%;overflow-x:clip}
+.hero h1 span{display:inline-block;animation:hero-accent-breathe 4.8s ease-in-out infinite}
+@keyframes hero-accent-breathe{0%,100%{transform:translateY(0);text-shadow:0 0 0 rgba(255,51,57,0)}50%{transform:translateY(-3px);text-shadow:0 0 24px rgba(255,51,57,.32)}}
+@media(max-width:700px){
+  header{padding:0 8px;overflow:hidden}
+  header nav{width:calc(100% - 40px);margin-left:6px;gap:0;padding:3px;overflow:hidden}
+  header nav a{min-width:0;flex:1 1 0;padding:8px 3px;font-size:clamp(8px,2.15vw,10px);letter-spacing:-.025em;text-align:center}
+  header nav a+a{margin-left:0}
+  .section-head{gap:16px}
+  .section-head h2{max-width:100%;font-size:clamp(2.8rem,12.2vw,3.7rem);overflow-wrap:anywhere}
+  .section-head h2 em{font-size:clamp(2.45rem,10.4vw,3.2rem);letter-spacing:-.06em}
+}
+@media(prefers-reduced-motion:reduce){.hero h1 span{animation:none}}
