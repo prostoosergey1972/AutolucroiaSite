@@ -84,10 +84,23 @@ header nav a.active{
   transform:none;
 }
 header nav a.active::after{content:none}
-/* Mobile navigation: the active state stays fully inside its own tab. */
+/* Mobile navigation: give every label enough room inside its own tab. */
 @media(max-width:700px){
-  header nav{gap:3px}
-  header nav a{box-sizing:border-box;border:0}
+  header nav{
+    display:grid;
+    grid-template-columns:1.32fr .9fr 1.05fr 1.1fr .95fr;
+    gap:2px;
+  }
+
+  header nav a{
+    min-width:0;
+    padding:8px 2px;
+    border:0;
+    font-size:clamp(9px,2.35vw,10px);
+    letter-spacing:-.055em;
+    white-space:nowrap;
+  }
+
   header nav a.active{
     border:0;
     box-shadow:inset 0 0 0 1px rgba(255,78,84,.78);
