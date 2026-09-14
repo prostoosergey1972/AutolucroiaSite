@@ -38,7 +38,9 @@ function Logo() {
 export default function Home() {
   const rail = useRef<HTMLDivElement>(null);
   const menu = useRef<HTMLElement>(null);
-  const [activeSection, setActiveSection] = useState("");
+const menuScrollLock = useRef(false);
+const menuScrollTimer = useRef<number | null>(null);
+const [activeSection, setActiveSection] = useState("");
   const [liquidPill, setLiquidPill] = useState({ left: 0, width: 0, visible: false });
 
   useEffect(() => {
@@ -69,7 +71,8 @@ export default function Home() {
   useEffect(() => {
     const sectionIds = ["como", "resultados", "seguranca", "lucas", "faq"];
     const updateSection = () => {
-      const marker = window.scrollY + Math.min(window.innerHeight * .34, 280);
+  if (menuScrollLock.current) return;
+  const marker = window.scrollY + Math.min(window.innerHeight * .34, 280);
       let current = "";
       sectionIds.forEach(id => {
         const section = document.getElementById(id);
@@ -95,14 +98,33 @@ export default function Home() {
     const distance = (card?.getBoundingClientRect().width || 300) + gap;
     element.scrollBy({ left: direction * distance, behavior: "smooth" });
   };
+const goToSection = (id: string) => {
+  setActiveSection(id);
+  menuScrollLock.current = true;
 
+  if (menuScrollTimer.current) {
+    window.clearTimeout(menuScrollTimer.current);
+  }
+
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+
+  menuScrollTimer.current = window.setTimeout(() => {
+    menuScrollLock.current = false;
+  }, 1400);
+};
   return (
     <main>
       <header>
         <a href="#inicio" aria-label="AutoLucro IA — início"><Logo /></a>
         <nav ref={menu} aria-label="Navegação">
           <span className="nav-liquid" aria-hidden="true" style={{ left: liquidPill.left, width: liquidPill.width, opacity: liquidPill.visible ? 1 : 0 }} />
-          {[["como", "Como funciona"], ["resultados", "Clientes"], ["seguranca", "Garantias"], ["lucas", "Fundador"], ["faq", "Dúvidas"]].map(([id, label]) => <a key={id} href={`#${id}`} onClick={() => setActiveSection(id)} className={activeSection === id ? "active" : ""} aria-current={activeSection === id ? "location" : undefined}>{label}</a>)}
+          {[["como", "Como funciona"], ["resultados", "Clientes"], ["seguranca", "Garantias"], ["lucas", "Fundador"], ["faq", "Dúvidas"]].map(([id, label]) => <a key={id} href={`#${id}`} onClick={(event) => {
+  event.preventDefault();
+  goToSection(id);
+}} className={activeSection === id ? "active" : ""} aria-current={activeSection === id ? "location" : undefined}>{label}</a>)}
         </nav>
       </header>
 
