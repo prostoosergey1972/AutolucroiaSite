@@ -58,6 +58,11 @@ html,body{max-width:100%;overflow-x:clip}
 
 .nav-liquid{box-shadow:inset 0 0 13px rgba(255,76,80,.16)}
 .nav-liquid::after{display:none}
+
+/* Keep the active state inside one navigation button at every viewport. */
+.nav-liquid{display:none!important}
+header nav a.active{z-index:2;border:1px solid rgba(255,70,76,.56);border-radius:14px;background:linear-gradient(125deg,rgba(255,73,79,.31),rgba(148,11,16,.2));box-shadow:inset 0 0 13px rgba(255,76,80,.16);transform:none}
+header nav a.active::after{content:none}
 @media(prefers-reduced-motion:reduce){.hero h1 span{animation:none}}
 
 @media(max-width:700px){
