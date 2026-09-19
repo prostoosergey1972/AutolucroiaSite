@@ -25,7 +25,7 @@ const questions = [
   ["Como funciona?", "Obtenha lucro ao ajudar a treinar a nossa IA. Ao utilizar o poder de computação da sua conta para processar dados, o algoritmo identifica as melhores transações. Quanto mais nós (utilizadores) ativos houver, mais preciso será o funcionamento do sistema e maior será o lucro global."],
   ["E quanto às garantias e à fiabilidade?", "A sua segurança é garantida pelo Fundo de Seguros até 50.000,00 €. O sistema está certificado de acordo com as normas MiCA. Todas as transações que efetuar estão protegidas e quaisquer erros algorítmicos, são totalmente cobertos por nós."],
   ["Como posso levantar os meus lucros?", "Os levantamentos podem ser efetuados para cartões bancários ou carteiras de criptomoedas. Os levantamentos são desbloqueados após a conclusão exata de 7 transações."],
-  ["Quanto posso ganhar?", "Os seus ganhos dependem da atividade do mercado. Em média, os nossos utilizadores ganham cerca de 10.000,00 € por dia. Também oferecemos 65,00 € de capital inicial para que possa obter o seu primeiro lucro sem necessidade de investimento."],
+  ["Quanto posso ganhar?", "Os seus ganhos dependem da atividade do mercado. Em média, os nossos utilizadores ganham cerca de 10.000,00 € por dia. Também oferecemos um bónus de 65,00 € totalmente gratuito para que possa obter o seu primeiro lucro sem qualquer investimento."],
   ["O que é o VIP?", "O seu nível VIP reflete o seu grau de atividade como utilizador e o seu sucesso na conclusão de transações. A cada novo nível, terá acesso a transações mais exclusivas, aumentará os seus lucros e desfrutará de mais privilégios."],
   ["Este projeto é adequado para principiantes?", "Sem dúvida. A IA encarrega-se de toda a análise complexa dos gráficos. Não é preciso ser um trader – basta acompanhar o processo e ativar os ciclos de transações com um simples toque num botão, tudo de forma 100% automatizada."],
 ];
@@ -135,7 +135,7 @@ export default function Home() {
           <p className="lead reveal">Sem investimento e totalmente automatizado. Enquanto relaxa, a nossa Inteligência Artificial analisa o mercado 24 horas por dia, realiza as transações por si e gera lucros garantidos diretamente no Telegram.</p>
           <div className="hero-actions reveal"><a href="#como" className="ghost-link">Ver como funciona <ChevronDown size={17} /></a></div>
           <div className="quick-facts reveal">
-            <div><strong>65 €</strong><span>capital inicial<br />para começar</span></div><ArrowRight className="fact-arrow" />
+            <div><strong>65 €</strong><span>bónus inicial<br />sem depósito</span></div><ArrowRight className="fact-arrow" />
             <div><strong>7</strong><span>transações no<br />nosso bot de IA</span></div><ArrowRight className="fact-arrow" />
             <div><strong>12.500 €</strong><span>lucro direto para<br />a sua conta</span></div>
           </div>
@@ -153,7 +153,7 @@ export default function Home() {
         <div className="section-head reveal"><span>COMO FUNCIONA</span><h2>Do início automático<br /><em>ao levantamento.</em></h2></div>
         <div className="how-grid">
           <div className="steps">
-            <article className="reveal"><span>01</span><ScanSearch /><div><h3>Comece com 65,00 € no saldo</h3><p>Oferecemos o capital inicial da plataforma a cada novo utilizador. Pode iniciar a sua primeira sessão de transações sem risco e sem precisar de depositar nada do seu bolso.</p></div></article>
+            <article className="reveal"><span>01</span><ScanSearch /><div><h3>Bónus de 65 € para começar</h3><p>Oferecemos um bónus de boas-vindas. Pode iniciar a sua primeira sessão de lucros sem precisar de depositar nada do seu bolso.</p></div></article>
             <article className="reveal"><span>02</span><LineChart /><div><h3>A IA trabalha por si</h3><p>Não precisa de ser trader nem analisar gráficos. O nosso algoritmo faz todo o trabalho: procura diferenças de preço lucrativas e realiza as transações 100% no piloto automático.</p></div></article>
             <article className="reveal"><span>03</span><Bot /><div><h3>Conclua 7 transações no bot</h3><p>Basta acompanhar o processo no Telegram. Cada operação bem-sucedida aumenta o seu saldo. O ciclo termina automaticamente assim que as 7 transações forem concluídas pela IA.</p></div></article>
             <article className="reveal"><span>04</span><CreditCard /><div><h3>Levante até 12.500 € para a sua conta</h3><p>Quando o ciclo termina, os seus fundos ficam disponíveis. Basta introduzir os dados da sua conta bancária ou carteira cripto e receber o seu lucro de forma rápida e segura.</p></div></article>
@@ -183,7 +183,7 @@ export default function Home() {
           <div className="assurance-copy reveal">
             <article><ShieldCheck /><div><span>FUNDO DE SEGUROS</span><h3>Proteção até 50.000,00 €</h3><p>Cada sessão de transações da IA está segurada no valor de 50.000,00 €. Todas as transações que efetuar estão protegidas e quaisquer erros algorítmicos são totalmente cobertos por nós.</p></div></article>
             <article><FileCheck2 /><div><span>REGULAÇÃO OFICIAL</span><h3>Licenças MiCA</h3><p>O algoritmo funciona em total conformidade com os requisitos regulamentares. Esta licença autoriza transações oficiais e o processamento seguro de todas as operações e lucros.</p></div></article>
-            <article><Check /><div><span>SEM RISCO INICIAL</span><h3>Capital inicial garantido</h3><p>Oferecemos 65,00 € na sua conta a cada novo utilizador. A IA começa a trabalhar com este saldo, comprovando a fiabilidade do sistema sem que corra qualquer risco.</p></div></article>
+            <article><Check /><div><span>SEM RISCO INICIAL</span><h3>Bónus sem depósito</h3><p>A IA começa a trabalhar com os 65 € que oferecemos no registo. Assim, pode comprovar a eficácia do sistema sem arriscar o seu próprio dinheiro.</p></div></article>
             <article><CreditCard /><div><span>LEVANTAMENTOS RÁPIDOS</span><h3>Acesso aos seus fundos</h3><p>Os levantamentos são desbloqueados automaticamente após a conclusão das 7 transações. Basta introduzir os seus dados e o sistema envia o dinheiro.</p></div></article>
           </div>
         </div>
